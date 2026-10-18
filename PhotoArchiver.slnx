@@ -1,0 +1,20 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PhotoArchiver.Application/PhotoArchiver.Application.csproj" />
+    <Project Path="src/PhotoArchiver.Domain/PhotoArchiver.Domain.csproj" />
+    <Project Path="src/PhotoArchiver.Infrastructure.ICloud/PhotoArchiver.Infrastructure.ICloud.csproj" />
+    <Project Path="src/PhotoArchiver.Infrastructure.Media/PhotoArchiver.Infrastructure.Media.csproj" />
+    <Project Path="src/PhotoArchiver.Infrastructure.Security/PhotoArchiver.Infrastructure.Security.csproj" />
+    <Project Path="src/PhotoArchiver.Infrastructure.Storage/PhotoArchiver.Infrastructure.Storage.csproj" />
+    <Project Path="src/PhotoArchiver.Web/PhotoArchiver.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PhotoArchiver.Application.Tests/PhotoArchiver.Application.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Architecture.Tests/PhotoArchiver.Architecture.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Domain.Tests/PhotoArchiver.Domain.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Infrastructure.ICloud.Tests/PhotoArchiver.Infrastructure.ICloud.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Infrastructure.Media.Tests/PhotoArchiver.Infrastructure.Media.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Infrastructure.Storage.Tests/PhotoArchiver.Infrastructure.Storage.Tests.csproj" />
+    <Project Path="tests/PhotoArchiver.Web.Tests/PhotoArchiver.Web.Tests.csproj" />
+  </Folder>
+</Solution>

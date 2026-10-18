@@ -7,12 +7,35 @@ A cross-platform .NET application that archives the oldest photos and videos of 
 
 ## Status
 
-Design phase. No code yet. See the documentation:
+Milestone M0 (walking skeleton) in progress. Planning and progress: [project board](https://github.com/users/MichaWresche/projects/1) and [issues](https://github.com/MichaWresche/icloud-photo-archiver/issues).
 
 | Document | Purpose |
 |---|---|
 | [Product decisions & limitations](docs/product/product-decisions.md) | Product owner's view: goals, scope, decisions, limitations, milestones |
 | [Architecture documentation (arc42)](docs/architecture/README.md) | Technical architecture following the arc42 template |
+
+## Getting started
+
+The app is meant to run as a Docker container:
+
+```sh
+cp deploy/.env.example deploy/.env    # choose the archive folder or share
+docker compose -f deploy/compose.yaml up
+```
+
+Then open http://127.0.0.1:8080. The container setup is added with [#10](https://github.com/MichaWresche/icloud-photo-archiver/issues/10).
+
+### Development
+
+Requires the [.NET 10 SDK](https://dotnet.microsoft.com/download).
+
+```sh
+dotnet build PhotoArchiver.slnx
+dotnet test --solution PhotoArchiver.slnx
+dotnet run --project src/PhotoArchiver.Web
+```
+
+The solution follows the Onion layout described in [§5 of the architecture documentation](docs/architecture/05_building_block_view.md). `PhotoArchiver.Architecture.Tests` fails the build when a project references or uses a layer it must not depend on.
 
 ## Tech at a glance
 
@@ -26,4 +49,4 @@ Design phase. No code yet. See the documentation:
 
 ## License
 
-MIT (added with the first code milestone).
+[MIT](LICENSE)

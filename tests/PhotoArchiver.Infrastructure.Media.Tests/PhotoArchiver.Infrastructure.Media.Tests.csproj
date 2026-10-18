@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- No tests yet: exit code 8 (zero tests ran) is accepted. Remove once the first test exists. -->
+  <PropertyGroup>
+    <TestingPlatformCommandLineArguments>$(TestingPlatformCommandLineArguments) --ignore-exit-code 8</TestingPlatformCommandLineArguments>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PhotoArchiver.Infrastructure.Media\PhotoArchiver.Infrastructure.Media.csproj" />
+  </ItemGroup>
+
+</Project>

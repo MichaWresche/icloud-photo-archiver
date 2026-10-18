@@ -163,6 +163,8 @@ In the container, `settings.json` lives in `/data`; `ArchiveRoot` is always `/ar
 
 Tests that need FFmpeg are skipped with a clear reason when it is not installed (CI installs it on all three OSes).
 
+**Test names** follow `MethodName_StateUnderTest_ExpectedBehavior` in PascalCase, e.g. `Transition_ToDeletedWithoutVerification_IsRejected` or `Append_AfterTruncatedLastLine_ContinuesHashChain`. When no single method is under test (architecture, container or end-to-end tests), the first part names the subject that is checked, e.g. `Domain_CompiledTypes_DependOnNoOtherProject`.
+
 ## 8.10 Localization
 
 All UI texts in `.resx` resources (`IStringLocalizer`). English is the default culture; German resources can be added without code changes. Dates and sizes are formatted by the browser/user culture.

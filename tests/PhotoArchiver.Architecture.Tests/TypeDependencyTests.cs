@@ -10,26 +10,26 @@ public sealed class TypeDependencyTests
     public static TheoryData<string> InfrastructureProjects => new(Layers.Infrastructure);
 
     [Fact]
-    public void Domain_depends_on_no_other_project()
+    public void Domain_CompiledTypes_DependOnNoOtherProject()
     {
         AssertNoDependency(Layers.Domain, [Layers.Application, Layers.Web, .. Layers.Infrastructure]);
     }
 
     [Fact]
-    public void Domain_depends_on_no_framework_beyond_the_base_library()
+    public void Domain_CompiledTypes_DependOnNoFrameworkBeyondBaseLibrary()
     {
         AssertNoDependency(Layers.Domain, ["Microsoft.AspNetCore", "Microsoft.Extensions", "System.Net.Http"]);
     }
 
     [Fact]
-    public void Application_depends_neither_on_infrastructure_nor_on_web()
+    public void Application_CompiledTypes_DependNeitherOnInfrastructureNorOnWeb()
     {
         AssertNoDependency(Layers.Application, [Layers.Web, .. Layers.Infrastructure]);
     }
 
     [Theory]
     [MemberData(nameof(InfrastructureProjects))]
-    public void Infrastructure_depends_neither_on_other_infrastructure_nor_on_web(string project)
+    public void Infrastructure_CompiledTypes_DependNeitherOnOtherInfrastructureNorOnWeb(string project)
     {
         string[] forbidden = [Layers.Web, .. Layers.Infrastructure.Where(other => other != project)];
 

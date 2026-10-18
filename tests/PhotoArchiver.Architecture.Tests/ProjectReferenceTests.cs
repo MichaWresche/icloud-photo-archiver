@@ -22,7 +22,7 @@ public sealed class ProjectReferenceTests
     public static TheoryData<string> SourceProjects => new(SourceProjectFiles().Select(Path.GetFileNameWithoutExtension)!);
 
     [Fact]
-    public void Every_source_project_has_a_defined_layer()
+    public void SourceProjects_AnyProjectInSrc_HasLayerRule()
     {
         var unknown = SourceProjectFiles()
             .Select(Path.GetFileNameWithoutExtension)
@@ -34,7 +34,7 @@ public sealed class ProjectReferenceTests
 
     [Theory]
     [MemberData(nameof(SourceProjects))]
-    public void Source_project_references_only_allowed_projects(string project)
+    public void SourceProject_ProjectReferences_PointOnlyToAllowedLayers(string project)
     {
         var path = SourceProjectFiles().Single(file => Path.GetFileNameWithoutExtension(file) == project);
         var references = XDocument.Load(path)

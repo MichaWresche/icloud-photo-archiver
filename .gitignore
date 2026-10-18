@@ -1,0 +1,22 @@
+# Build output
+bin/
+obj/
+artifacts/
+TestResults/
+*.user
+.vs/
+.idea/
+
+# Secrets and local state (never commit)
+.env
+deploy/.env
+settings*.json
+!**/appsettings*.json
+*.enc
+keys/
+sessions/
+logs/
+*.log
+
+# Local tooling
+.claude/

@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="NetArchTest.Rules" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\PhotoArchiver.Domain\PhotoArchiver.Domain.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Application\PhotoArchiver.Application.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Infrastructure.ICloud\PhotoArchiver.Infrastructure.ICloud.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Infrastructure.Storage\PhotoArchiver.Infrastructure.Storage.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Infrastructure.Media\PhotoArchiver.Infrastructure.Media.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Infrastructure.Security\PhotoArchiver.Infrastructure.Security.csproj" />
+    <ProjectReference Include="..\..\src\PhotoArchiver.Web\PhotoArchiver.Web.csproj" />
+  </ItemGroup>
+
+</Project>

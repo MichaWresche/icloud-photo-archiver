@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+  </PropertyGroup>
+
+  <!-- Web is the composition root and the only project that references all others. -->
+  <ItemGroup>
+    <ProjectReference Include="..\PhotoArchiver.Application\PhotoArchiver.Application.csproj" />
+    <ProjectReference Include="..\PhotoArchiver.Infrastructure.ICloud\PhotoArchiver.Infrastructure.ICloud.csproj" />
+    <ProjectReference Include="..\PhotoArchiver.Infrastructure.Storage\PhotoArchiver.Infrastructure.Storage.csproj" />
+    <ProjectReference Include="..\PhotoArchiver.Infrastructure.Media\PhotoArchiver.Infrastructure.Media.csproj" />
+    <ProjectReference Include="..\PhotoArchiver.Infrastructure.Security\PhotoArchiver.Infrastructure.Security.csproj" />
+  </ItemGroup>
+
+</Project>
